@@ -100,7 +100,7 @@ export const PostList = () => {
                         isLoading || isFetching ? (
                             <span className='flex gap-4'>Loading ... <Spinner size="sm" /></span>
                         ) : postsData?.data?.length === 0 ? (
-                            <p>No post data</p>
+                            <p className="text-red-500 p-2 font-semibold">There&apos;s no user posts</p>
                         ) : (
                             <div className="overflow-auto">
                                 <Table>

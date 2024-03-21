@@ -63,7 +63,7 @@ export const Comment = ({
                                     }).format(new Date(comment.createdAt))
                                 )}
                             </span>
-                            
+
                             {!isEditing && (
                                 <p className="text-justify text-ellipsis whitespace-break-spaces mt-1">
                                     {comment.desc}

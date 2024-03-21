@@ -23,7 +23,7 @@ export const CommentList = () => {
         },
         queryKey: ["comments"],
     });
-
+    console.log(commentData);
     useEffect(() => {
         if (!userState.userInfo) {
             const timeoutId = setTimeout(() => {
@@ -95,7 +95,7 @@ export const CommentList = () => {
                     ) : isError ? (
                         <p>Error loading data</p>
                     ) : !Array.isArray(commentData) || commentData?.length === 0 ? (
-                        <p>No user data</p>
+                        <p className="text-red-500 p-2 font-semibold">There&apos;s no user comments</p>
                     ) : (
                         <div className="overflow-auto">
                             <Table>
